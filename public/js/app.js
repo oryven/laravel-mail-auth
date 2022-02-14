@@ -1918,11 +1918,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       videogames: []
     };
+  },
+  props: {
+    user: String
   },
   mounted: function mounted() {
     var _this = this;
@@ -37528,11 +37534,26 @@ var render = function () {
     { staticClass: "videogames-container" },
     _vm._l(_vm.videogames, function (videogame, i) {
       return _c("div", { key: i }, [
-        _c("div", [_vm._v("Titolo: " + _vm._s(videogame.title))]),
+        _c("span", [_vm._v("Titolo: " + _vm._s(videogame.title))]),
         _vm._v(" "),
-        _c("div", [_vm._v("Sottotitolo: " + _vm._s(videogame.subtitle))]),
+        _c("span", [_vm._v("Sottotitolo: " + _vm._s(videogame.subtitle))]),
         _vm._v(" "),
-        _c("div", [_vm._v("Voto: " + _vm._s(videogame.rating))]),
+        _c("span", [_vm._v("Voto: " + _vm._s(videogame.rating))]),
+        _vm._v(" "),
+        _vm.user
+          ? _c("span", [
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-danger",
+                  attrs: { href: "/api/videogames/delete/" + videogame.id },
+                },
+                [_vm._v("Cancella")]
+              ),
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c("hr"),
       ])
     }),
     0

@@ -1,9 +1,12 @@
 <template>
     <div class="videogames-container">
         <div v-for="videogame, i in videogames" :key="i">
-            <div>Titolo: {{videogame.title}}</div>
-            <div>Sottotitolo: {{videogame.subtitle}}</div>
-            <div>Voto: {{videogame.rating}}</div>
+            <span>Titolo: {{videogame.title}}</span>
+            <span>Sottotitolo: {{videogame.subtitle}}</span>
+            <span>Voto: {{videogame.rating}}</span>
+            <span v-if="user"><a :href="'/api/videogames/delete/' +  videogame.id" class="btn btn-danger">Cancella</a>
+            </span>
+            <hr>
         </div>
     </div>
 </template>
@@ -15,6 +18,10 @@
             return {
                 videogames: []
             }
+        },
+
+         props: {
+            user: String
         },
 
         mounted() {
