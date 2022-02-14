@@ -7,6 +7,7 @@ use App\Videogame;
 use Illuminate\Support\Facades\Mail;
 
 use App\Mail\VideogameDeleteMail;
+use Illuminate\Support\Facades\Auth;
 
 class ApiController extends Controller
 {
