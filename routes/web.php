@@ -30,3 +30,5 @@ Route::post('/login', 'Auth\LoginController@login') -> name('login');
 Route::get('/logout', 'Auth\LoginController@logout') -> name('logout');
 
 Route::get('/api/videogames/delete/{id}', 'ApiController@deleteVideogames') -> name('api.videogames.delete');
+
+
