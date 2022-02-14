@@ -1,10 +1,10 @@
 <template>
     <div class="videogames-container">
-            <div v-for="videogame, i in videogames" :key="i">
-                <p>Titolo: {{videogame.title}}</p>
-                <p>Sottotitolo: {{videogame.subtitle}}</p>
-                <p>Voto: {{videogame.rating}}</p>
-            </div>
+        <div v-for="videogame, i in videogames" :key="i">
+            <div>Titolo: {{videogame.title}}</div>
+            <div>Sottotitolo: {{videogame.subtitle}}</div>
+            <div>Voto: {{videogame.rating}}</div>
+        </div>
     </div>
 </template>
 

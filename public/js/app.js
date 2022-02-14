@@ -37528,11 +37528,11 @@ var render = function () {
     { staticClass: "videogames-container" },
     _vm._l(_vm.videogames, function (videogame, i) {
       return _c("div", { key: i }, [
-        _c("p", [_vm._v("Titolo: " + _vm._s(videogame.title))]),
+        _c("div", [_vm._v("Titolo: " + _vm._s(videogame.title))]),
         _vm._v(" "),
-        _c("p", [_vm._v("Sottotitolo: " + _vm._s(videogame.subtitle))]),
+        _c("div", [_vm._v("Sottotitolo: " + _vm._s(videogame.subtitle))]),
         _vm._v(" "),
-        _c("p", [_vm._v("Voto: " + _vm._s(videogame.rating))]),
+        _c("div", [_vm._v("Voto: " + _vm._s(videogame.rating))]),
       ])
     }),
     0
